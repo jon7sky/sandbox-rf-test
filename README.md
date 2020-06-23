@@ -32,7 +32,9 @@ In single config mode, the RF parameters (such as LoRa spread factor, bandwidth,
 
 In multi config mode, the sender steps through all the configurations in the table and sends a few messages using each configuration. The receiver simultaneously steps through all the configurations and receives those messages. It displays a table of all configurations with signal quality information about each one.
 
-# Single Mode Display
+# Single Config Display
+
+![](images/IMG_0580.JPG)
 
 The top line of the display will tell you if it's set to TX or RX mode, and will display the frequency band used. The second line will tell you what configuration you have selected. 
 
@@ -42,9 +44,11 @@ The receiver will display a message every time a packet is received. It will dis
 
 # Multi Config Display
 
+![](images/IMG_0585.JPG)
+
 The top line of the display will tell you if it's set to TX or RX mode, and will display the frequency band used.
 
-Bot the sender and receiver need to be in sync. To do this, first power up the receiver. After a couple of seconds, it will display "Syncing". Power up the transmitter. The synchronization should happen on the first message transmitted. Note: Once the receiver has synchronized, there is no attempt to stay in sync. So, if for some reason the clocks drift, synchronization will be lost.
+Both the sender and receiver need to be in sync. To do this, first power up the receiver. After a couple of seconds, it will display "Syncing". Power up the transmitter. The synchronization should happen on the first message transmitted. Note: Once the receiver has synchronized, there is no attempt to stay in sync. So, if for some reason the clocks drift, synchronization will be lost.
 
 The transmitter will step through each of the configurations and send five packets with each config. The second line of the display will show you which config is being used. Each packet is the string "HelloThere" plus an incrementing number.
 
