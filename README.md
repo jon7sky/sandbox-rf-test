@@ -44,7 +44,7 @@ The receiver will display a message every time a packet is received. It will dis
 
 # Multi Config Display
 
-![](images/IMG_0585.JPG)
+![](images/IMG_0585.jpg)
 
 The top line of the display will tell you if it's set to TX or RX mode, and will display the frequency band used.
 
