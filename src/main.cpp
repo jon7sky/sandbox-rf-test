@@ -241,12 +241,12 @@ void loopSeqMode(void) {
       for (int i = 0; i < rf.cfgCnt; i++) {
         //sprintf(txt, "%s", rf.cfg[i].name);
         if (i == cfgIdx) {
-          sprintf(txt, "%s  *** ***", rf.cfg[i].name);
+          sprintf(txt, "%s *** ***", rf.cfg[i].name);
         } else if (rssi[i] < 0) {
           // sprintf(&txt[2], "%4d %3d", (msgRxCnt[i] > 0 ? rssi[i] / msgRxCnt[i] : 0), quality[i] * (100 / (rf.txCnt * rf.txMsgLen)));  // RSSI, Quality
-          sprintf(txt, "%s %4d %3d", rf.cfg[i].name, (msgRxCnt[i] > 0 ? snr[i] / msgRxCnt[i] : 0),  quality[i] * (100 / (rf.txCnt * rf.txMsgLen)));  // SNR, Quality
+          sprintf(txt, "%s%4d %3d", rf.cfg[i].name, (msgRxCnt[i] > 0 ? snr[i] / msgRxCnt[i] : 0),  quality[i] * (100 / (rf.txCnt * rf.txMsgLen)));  // SNR, Quality
         } else {
-          sprintf(txt, "%s  --- ---", rf.cfg[i].name);
+          sprintf(txt, "%s --- ---", rf.cfg[i].name);
         }
         display.setCursor((i % rf.numColumns) * (128 / rf.numColumns), LINE(3 + (i / rf.numColumns)));
         display.print(txt);
